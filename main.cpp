@@ -9,7 +9,7 @@ void forward() {
     if (stop_ == 0) {
         Servo_L.write(180);
         Servo_R.write(180);
-    }
+    } 
     else {
         Servo_L.write(90);
         Servo_R.write(90);
