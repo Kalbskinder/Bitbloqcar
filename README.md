@@ -10,7 +10,7 @@
 7. Connect to the board via bluetooth
 8. By sending "forward", "backwards", "left", "right", "stop" to the board, you can conntrol the car
 
--------------------
+------------------
 Pins layout
 -------------------
 Continous Servos: 6, 9
