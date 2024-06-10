@@ -13,5 +13,5 @@
 ------------------
 Pins layout
 -------------------
-Continous Servos: 6, 9
-Mini Servo: 11
+- Continous Servos: 6, 9
+- Mini Servo: 11
