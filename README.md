@@ -1,4 +1,4 @@
-#Bitbloq RC Car
+# Bitbloq RC Car
 
 ### Step by Step Instructions
 1. Donwload Arduino [IDE](arduino.com/software)
@@ -10,8 +10,6 @@
 7. Connect to the board via bluetooth
 8. By sending "forward", "backwards", "left", "right", "stop" to the board, you can conntrol the car
 
-------------------
-Pins layout
--------------------
+### Pins layout
 - Continous Servos: 6, 9
 - Mini Servo: 11
