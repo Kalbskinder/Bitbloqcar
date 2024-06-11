@@ -3,7 +3,7 @@ A car built with Bitbloq that is controled via Bluetooth
 
 
 ### Step by Step Instructions
-1. Donwload [Arduino IDE](arduino.com/software)
+1. Donwload [Arduino IDE](https://www.arduino.cc/en/software/)
 2. Make sureyou have the correct board selected
 3. Connect the Motors and the LED to the correct pins
 4. Download the Bitbloq plugin on the Arduino IDE
