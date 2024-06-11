@@ -1,6 +1,6 @@
-------------------------------
-  Step by Step Instructions
-------------------------------
+#Bitbloq RC Car
+
+### Step by Step Instructions
 1. Donwload Arduino [IDE](arduino.com/software)
 2. Make sureyou have the correct board selected
 3. Connect the Motors and the LED to the correct pins
