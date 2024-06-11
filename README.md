@@ -1,4 +1,5 @@
 # Bitbloq RC Car
+A car built with Bitbloq that is controled via Bluetooth
 
 ### Step by Step Instructions
 1. Donwload Arduino [IDE](arduino.com/software)
