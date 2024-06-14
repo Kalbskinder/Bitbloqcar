@@ -13,5 +13,5 @@ A car built with Bitbloq that is controled via Bluetooth
 8. By sending "forward", "backwards", "left", "right", "stop" to the board, you can conntrol the car
 
 ### Pins layout
-- Continous Servos: 6, 9
-- Mini Servo: 11
+- Left and Right (acceleration): 6, 9
+- Front (steering) 11
