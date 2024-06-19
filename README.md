@@ -10,7 +10,7 @@ A car built with Bitbloq that is controled via Bluetooth
 5. Copy paste the code into the Arduino IDE
 6. Upload the code
 7. Connect to the board via bluetooth
-8. By sending "forward", "backwards", "left", "right", "stop" to the board, you can conntrol the car
+8. Use the [App](https://gallery.appinventor.mit.edu/?galleryid=1c284dfc-ad8e-49f4-8d06-49ffb7101648) to control the car
 
 ### Pins layout
 - Back (acceleration): 8
