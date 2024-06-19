@@ -17,4 +17,4 @@ A car built with Bitbloq that is controled via Bluetooth
 - Front (steering) 11
 
 ### Remote Controll App
-The code can be controle by the [App](https://gallery.appinventor.mit.edu/?galleryid=1c284dfc-ad8e-49f4-8d06-49ffb7101648) that was built with [MIT App Inventor]([https://appinventor.mit.edu/])
+The code can be controle by the [App](https://gallery.appinventor.mit.edu/?galleryid=1c284dfc-ad8e-49f4-8d06-49ffb7101648) that was built with [MIT App Inventor](https://appinventor.mit.edu/)
