@@ -1,35 +1,22 @@
 
+/***   Included libraries  ***/
 #include <Servo.h>
 #include <BitbloqSoftwareSerial.h>
 
-Servo ServoL;
-Servo ServoR;
+/***   Global variables and function definition  ***/
+Servo ServoB;
 Servo ServoF;
 bqSoftwareSerial board_bluetooth(0, 1, 19200);
 float steering_ = 0;
 float stop_ = 0;
 
 void forward() {
-    while (stop_ == 0) {
-        ServoL.write(180);
-        ServoR.write(180);
-    }
-    if (stop_ == 1) {
-        ServoL.write(90);
-        ServoR.write(90);
-    }
+    ServoB.write(0);
 }
 
 
 void backwards() {
-    while (stop_ == 0) {
-        ServoL.write(0);
-        ServoR.write(0);
-    }
-    if (stop_ == 1) {
-        ServoL.write(90);
-        ServoR.write(90);
-    }
+    ServoB.write(180);
 }
 
 
@@ -37,12 +24,9 @@ void left() {
     if (steering_ == 0) {
         steering_ = 1;
         ServoF.write(180);
-        delay(200);
+        delay(700);
         ServoF.write(90);
-        ServoF.write(0);
-        delay(200);
-        ServoF.write(90);
-        steering_ = 0;
+        steering_ = 2;
     }
 }
 
@@ -51,40 +35,70 @@ void right() {
     if (steering_ == 0) {
         steering_ = 1;
         ServoF.write(0);
-        delay(200);
+        delay(700);
         ServoF.write(90);
+        steering_ = 2;
+    }
+}
+
+
+void stop() {
+    ServoB.write(90);
+}
+
+
+void left_stop() {
+    if (steering_ == 2) {
         ServoF.write(0);
-        delay(200);
+        delay(700);
         ServoF.write(90);
         steering_ = 0;
     }
 }
 
 
+void right_stop() {
+    if (steering_ == 2) {
+        ServoF.write(180);
+        delay(700);
+        ServoF.write(90);
+        steering_ = 0;
+    }
+}
+
+
+/***   Setup  ***/
 void setup() {
-    ServoL.attach(8);
-    ServoR.attach(9);
+    ServoB.attach(8);
     ServoF.attach(11);
     board_bluetooth.begin(19200);
 }
 
+/***   Loop  ***/
 void loop() {
-    auto char_ = board_bluetooth.readInt();
-    if (char_ == 1) {
+    String char_ = board_bluetooth.readString();
+    if (char_ == "gas") {
         stop_ = 0;
         forward();
     }
-    if (char_ == 2) {
+    if (char_ == "back") {
         stop_ = 0;
         backwards();
     }
-    if (char_ == 3) {
+    if (char_ == "left") {
         left();
     }
-    if (char_ == 4) {
+    if (char_ == "right") {
         right();
     }
-    if (char_ == 5) {
+    if (char_ == "stop") {
         stop_ = 1;
+        stop();
+    }
+    if (char_ == "left_stop") {
+        left_stop();
+    }
+    if (char_ == "right_stop") {
+        right_stop();
     }
 }
