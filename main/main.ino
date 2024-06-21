@@ -23,8 +23,8 @@ void backwards() {
 void left() {
     if (steering_ == 0) {
         steering_ = 1;
-        ServoF.write(180);
-        delay(700);
+        ServoF.write(0);
+        delay(250);
         ServoF.write(90);
         steering_ = 2;
     }
@@ -34,8 +34,8 @@ void left() {
 void right() {
     if (steering_ == 0) {
         steering_ = 1;
-        ServoF.write(0);
-        delay(700);
+        ServoF.write(180);
+        delay(250);
         ServoF.write(90);
         steering_ = 2;
     }
@@ -49,8 +49,8 @@ void stop() {
 
 void left_stop() {
     if (steering_ == 2) {
-        ServoF.write(0);
-        delay(700);
+        ServoF.write(180);
+        delay(250);
         ServoF.write(90);
         steering_ = 0;
     }
@@ -59,8 +59,8 @@ void left_stop() {
 
 void right_stop() {
     if (steering_ == 2) {
-        ServoF.write(180);
-        delay(700);
+        ServoF.write(0);
+        delay(250);
         ServoF.write(90);
         steering_ = 0;
     }
@@ -92,8 +92,8 @@ void loop() {
         right();
     }
     if (char_ == "stop") {
-        stop_ = 1;
         stop();
+        stop_ = 1;
     }
     if (char_ == "left_stop") {
         left_stop();
